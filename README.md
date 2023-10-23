@@ -13,7 +13,8 @@ In [DuplicateGitFilesChecker.py](https://github.com/Illegal-Services/DuplicateGi
 
 # Known Issue
 
-If you need this script to work with folders as well, please create an issue in the repository. I have a working method for handling folders by iterating recursively through the directory structure using the following Git command:
+If you need this script to work with folders as well, please create an issue in the repository.
+I have a working method for handling folders by iterating recursively through the directory structure using the following Git command:
 ```
 git ls-tree --name-only -d HEAD
 ```
