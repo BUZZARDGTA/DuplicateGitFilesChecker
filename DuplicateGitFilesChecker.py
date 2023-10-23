@@ -29,3 +29,5 @@ if duplicates:
     for duplicate in sorted(duplicates, key=str.lower):
         print(duplicate)
     exit(1)
+
+exit(0)
