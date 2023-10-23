@@ -3,15 +3,18 @@ import subprocess
 from pathlib import Path
 
 
-git_repo_directory = Path("D:/Git/Illegal_Services/GitHub")
-os.chdir(git_repo_directory)
+GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")
 
-command = "git ls-files"
-try:
-    output = subprocess.check_output(command, shell=True, text=True)
-except subprocess.CalledProcessError as e:
-    print("Error running the command:", e)
-    exit(0)
+
+def run_git_command(command):
+    try:
+        return subprocess.check_output(command, shell=True, text=True)
+    except subprocess.CalledProcessError as e:
+        raise("Error running the command:", e)
+
+
+os.chdir(GIT_REPO)
+output = run_git_command("git ls-files")
 
 # Split the output into lines and convert them to lowercase
 lines = output.split("\n")
