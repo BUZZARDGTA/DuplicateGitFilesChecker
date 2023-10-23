@@ -28,3 +28,4 @@ for line, line_lower in zip(lines, lines_lowercase):
 if duplicates:
     for duplicate in sorted(duplicates, key=str.lower):
         print(duplicate)
+    exit(1)
