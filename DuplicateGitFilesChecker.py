@@ -8,19 +8,17 @@ GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")
 
 def run_git_command(command):
     try:
-        return subprocess.check_output(command, shell=True, text=True)
+        output = subprocess.check_output(command)
+        output = output.decode().splitlines(keepends=False)
+        return output
     except subprocess.CalledProcessError as e:
         raise("Error running the command:", e)
 
 
 os.chdir(GIT_REPO)
-output = run_git_command("git ls-files")
-
-# Split the output into lines and convert them to lowercase
-lines = output.split("\n")
+lines = run_git_command("git ls-files")
 lines_lowercase = [line.lower() for line in lines]
 
-# Create a set to keep track of seen lines (case-insensitive)
 seen_lines = set()
 duplicates = set()
 
