@@ -11,7 +11,7 @@ https://git-scm.com/docs/git-config
 
 In [DuplicateGitFilesChecker.py](https://github.com/Illegal-Services/DuplicateGitFilesChecker/blob/main/DuplicateGitFilesChecker.py), replace `GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")` with your own desired repo's Path.
 
-# Known Issues
+# Known Issue
 
 If you need this script to work with folders as well, please create an issue in the repository. I have a working method for handling folders by iterating recursively through the directory structure using the following Git command:
 ```
