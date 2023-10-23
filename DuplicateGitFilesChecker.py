@@ -1,9 +1,7 @@
 import os
+import sys
 import subprocess
 from pathlib import Path
-
-
-GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")
 
 
 def execute(command):
@@ -11,7 +9,12 @@ def execute(command):
     return output
 
 
-os.chdir(GIT_REPO)
+if len(sys.argv) != 2:
+    print('Usage: python "DuplicateGitFilesChecker.py" "<git_repo_path>"')
+    sys.exit(1)
+
+git_repo_path = Path(sys.argv[1])
+os.chdir(git_repo_path)
 output = execute("git ls-files")
 lines = output.decode().splitlines(keepends=False)
 lines_lowercase = [line.lower() for line in lines]
@@ -28,6 +31,6 @@ for line, line_lower in zip(lines, lines_lowercase):
 if duplicates:
     for duplicate in sorted(duplicates, key=str.lower):
         print(duplicate)
-    exit(1)
+    sys.exit(1)
 
-exit(0)
+sys.exit(0)
