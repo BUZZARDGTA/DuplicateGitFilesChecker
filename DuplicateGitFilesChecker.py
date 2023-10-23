@@ -28,6 +28,5 @@ for line, line_lower in zip(lines, lines_lowercase):
     seen_lines.add(line_lower)
 
 if duplicates:
-    print("Duplicates (case-insensitive):")
     for duplicate in sorted(duplicates, key=str.lower):
         print(duplicate)
