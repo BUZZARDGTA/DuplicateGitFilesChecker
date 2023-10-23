@@ -6,3 +6,7 @@ Something else useful is the git command:
 
 see more at:
 https://git-scm.com/docs/git-config
+
+# Usage
+
+In "DuplicateGitFilesChecker", replace `git_repo_directory = Path("D:/Git/Illegal_Services/GitHub")` with your desired repo's Path.
