@@ -9,4 +9,4 @@ https://git-scm.com/docs/git-config
 
 # Usage
 
-In "[DuplicateGitFilesChecker.py](https://github.com/Illegal-Services/DuplicateGitFilesChecker/blob/main/DuplicateGitFilesChecker.py)", replace `GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")` with your desired repo's Path.
+In [DuplicateGitFilesChecker.py](https://github.com/Illegal-Services/DuplicateGitFilesChecker/blob/main/DuplicateGitFilesChecker.py), replace `GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")` with your desired repo's Path.
