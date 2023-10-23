@@ -4,7 +4,7 @@ This script returns a list of files that are duplicated within your Git reposito
 
 ## Usage
 
-In [DuplicateGitFilesChecker.py](https://github.com/Illegal-Services/DuplicateGitFilesChecker/blob/main/DuplicateGitFilesChecker.py), replace `GIT_REPO = Path("D:/Git/Illegal_Services/GitHub")` with your own desired repo's Path.
+Usage: `python "DuplicateGitFilesChecker.py" "<git_repo_path>"`
 
 ## Known Issue
 
